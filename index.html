@@ -1,0 +1,2104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Asciidoctor 2.0.20">
+<title>Julian Boehme - Portfolio</title>
+<style>
+/*
+
+##################################
+############ READ ME #############
+
+author: Julian Böhme
+Important attributes are commented with "IMPORTANT".
+
+##################################
+##################################
+*/
+
+/* Based on Darkly from Bootswatch (http://bootswatch.com/darkly/) */
+@import url("https://fonts.googleapis.com/css?family=Lato:400,700,400italic");
+
+/* document body (contains all content) */
+body {
+  font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.42857143;
+  color: #ffffff;
+  background-color: #222222;
+  margin-left: 10%;               /*IMPORTANT*/
+  margin-right: 10%;              /*IMPORTANT*/
+}
+
+/* document header (contains title etc) */
+#header {
+  width: 100%;
+}
+#header>h1 {
+  border-bottom: 1px solid #ddddd8;
+  padding-bottom: 8px;
+}
+
+/* headings */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  line-height: 1.1;
+  color: inherit;
+}
+h1,
+h2,
+h3 {
+  margin-top: 21px;
+  margin-bottom: 10.5px;
+}
+h4,
+h5,
+h6 {
+  margin-top: 10.5px;
+  margin-bottom: 10.5px;
+}
+h1 {
+/*   font-size: 39px; */
+  font-size: 4em;
+}
+h2 {
+  font-size: 32px;
+}
+h3 {
+  font-size: 26px;
+}
+h4 {
+  font-size: 19px;
+}
+h5 {
+  font-size: 15px;
+}
+h6 {
+  font-size: 13px;
+}
+
+/* plain paragraph text */
+.paragraph {
+/*   font-family: sans-serif; */
+  margin: 0 0 10.5px;
+}
+p {
+/*   font-family: sans-serif; */
+  margin: 0 0 10.5px;
+}
+
+/* blockquote text */
+.quoteblock {
+  font-style: italic;
+}
+blockquote {
+  padding: 10.5px 21px;
+  margin: 0 0 21px;
+  font-size: 18.75px;
+  border-left: 5px solid #464545;
+}
+blockquote p:last-child,
+blockquote ul:last-child,
+blockquote ol:last-child {
+  margin-bottom: 0;
+}
+.blockquote-reverse,
+blockquote.pull-right {
+  padding-right: 15px;
+  padding-left: 0;
+  border-right: 5px solid #464545;
+  border-left: 0;
+  text-align: right;
+}
+.blockquote-reverse footer:before,
+blockquote.pull-right footer:before,
+.blockquote-reverse small:before,
+blockquote.pull-right small:before,
+.blockquote-reverse .small:before,
+blockquote.pull-right .small:before {
+  content: '';
+}
+.blockquote-reverse footer:after,
+blockquote.pull-right footer:after,
+.blockquote-reverse small:after,
+blockquote.pull-right small:after,
+.blockquote-reverse .small:after,
+blockquote.pull-right .small:after {
+  content: '\00A0 \2014';
+}
+
+/* blockquote attribution text */
+.attribution,
+.cite,
+blockquote footer,
+blockquote small,
+blockquote .small {
+  display: block;
+  font-style: normal;
+  line-height: 1.42857143;
+  color: #999999;
+}
+.attribution:before,
+blockquote footer:before,
+blockquote small:before,
+blockquote .small:before {
+  content: '\2014 \00A0';
+}
+
+/* unordered list */
+ul, ol {
+  margin-top: 0;
+  margin-bottom: 10.5px;
+}
+ul ul,
+ol ul,
+ul ol,
+ol ol {
+  margin-bottom: 0;
+}
+
+
+/* links */
+a {
+  color: rgb(97, 159, 252);
+  background-color: transparent;
+  text-decoration: none;
+}
+a:hover,
+a:focus {
+  color: #ffffff;
+  text-decoration: underline;
+}
+a:focus {
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+}
+
+/* horizontal rules */
+hr {
+  margin-top: 21px;
+  margin-bottom: 21px;
+  border: 0;
+  border-top: 1px solid #464545;
+}
+
+/* table */
+table {
+  background-color: transparent;
+  width: 100%;
+  max-width: 100%;
+  margin-bottom: 21px;
+  border-collapse: collapse;
+}
+table col[class*="col-"] {
+  position: static;
+  float: none;
+  display: table-column;
+}
+table td[class*="col-"],
+table th[class*="col-"] {
+  position: static;
+  float: none;
+  display: table-cell;
+}
+
+/* table caption */
+caption {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  color: #999999;
+  text-align: left;
+}
+
+/* table header row */
+thead {
+  border-bottom: 2px solid #464545;
+}
+
+/* table header cell */
+th {
+  text-align: left;
+  padding-left: 8px;
+}
+
+/* table footer */
+tfoot {
+  color: #807F81;
+  border-top: 1px solid #464545;
+}
+
+/* table cell */
+td {
+  border-top: 1px solid #464545;
+}
+td p {
+  margin: auto;
+  padding: 8px;
+}
+
+/* table body */
+tbody > tr:nth-of-type(odd) {
+  background-color: #3d3d3d;
+}
+tbody > tr:hover {
+  background-color: #464545;
+}
+
+/* inline code */
+code,
+kbd,
+pre,
+samp {
+  font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+code {
+  padding: 2px 4px;
+  font-size: 100%;
+  /*color: #e9ec23;           /*IMPORTANT Inline code color*/
+  /*color: #23c4ec;           /*IMPORTANT Inline code color*/
+  color: #eb1cb7;           /*IMPORTANT Inline code color*/
+  /*color: #eb1ccf;           /*IMPORTANT Inline code color*/
+  /*background-color: #707070;  IMPORTANT Inline code background color*/
+  border-radius: 4px;
+}
+kbd {
+  padding: 2px 4px;
+  font-size: 90%;
+  color: #ffffff;
+  background-color: #333333;
+  border-radius: 0;
+  -webkit-box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.25);
+          box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.25);
+}
+kbd kbd {
+  padding: 0;
+  font-size: 100%;
+  font-weight: bold;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+pre {
+  display: block;
+  padding: 0px;           /*IMPORTANT: Annoying padding around code blocks, which let's the white background come through*/
+  margin: 0 0 10.5px;
+  font-size: 14px;
+  line-height: 1.42857143;
+  word-break: break-all;
+  word-wrap: break-word;
+  color: #303030;
+  background-color: #ebebeb;
+  border: 1px solid #707070;    /*IMPORTANT: Border around code blocks.*/
+  border-radius: 4px;
+}
+pre code {
+  padding: 0;
+  font-size: inherit;
+  color: inherit;
+  white-space: pre-wrap;
+  background-color: transparent;
+  border-radius: 0;
+}
+
+/* image */
+img {
+  max-width: 100%;
+  vertical-align: middle;
+}
+
+/* footer section */
+#footer {
+  margin-top: 22px;
+  padding: 14px 16px;
+  color: white;
+  background-color: #375A7F;
+}
+
+/* responsiveness fixes */
+video {
+  max-width: 100%;
+}
+
+/* table of Contents sidebar */
+#toctitle {
+  color: #222222;
+}
+
+#toc ul {       /*IMPORTANT Specifies that unordered list items of the table of contents are not indented*/
+  /* display: inline;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden; */
+}
+
+#toc li {
+  display: block;
+}
+
+#toc a {                  /*IMPORTANT Specifies how the table of contents looks*/
+  /* background-color: rgb(55, 90, 127);
+  float: left;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none; */
+}
+
+#toc li a:hover {
+  background-color: rgb(40, 65, 91);
+  text-decoration: none;
+}
+
+#toc:after {
+  content: " ";
+  visibility: hidden;
+  display: block;
+  height: 0;
+  clear: both;
+}
+
+@media all and (max-width: 600px) {
+table {
+  width: 55vw!important;
+  font-size: 3vw;
+}
+
+</style>
+<link rel="stylesheet" href=".\syntax_highlight/styles/dracula.min.css">
+</head>
+<body class="article">
+<div id="header">
+<h1>Julian Boehme - Portfolio</h1>
+<div id="toc" class="toc">
+<div id="toctitle">Table of Contents</div>
+<ul class="sectlevel1">
+<li><a href="#_unreal_engine_portals">Unreal Engine: Portals</a>
+<ul class="sectlevel2">
+<li><a href="#portal-mechanics-id">Portal Mechanics</a></li>
+<li><a href="#game-elements-id">Game Elements</a>
+<ul class="sectlevel3">
+<li><a href="#_teleportable_objects">Teleportable Objects</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#_unity_just_another_zombie_shooter">Unity: Just Another Zombie Shooter</a>
+<ul class="sectlevel2">
+<li><a href="#_goal_of_the_game">Goal Of The Game</a></li>
+<li><a href="#_the_map">The Map</a></li>
+<li><a href="#id_HUD">The HUD</a></li>
+<li><a href="#_weapon_system">Weapon System</a>
+<ul class="sectlevel3">
+<li><a href="#_guns">Guns</a></li>
+<li><a href="#id_CCWs">Close Combat Weapons</a></li>
+</ul>
+</li>
+<li><a href="#_pickup_system">Pickup System</a>
+<ul class="sectlevel3">
+<li><a href="#id_crates">Crates</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#_blender_tie_fighter_advertisement">Blender: TIE-Fighter Advertisement</a></li>
+<li><a href="#_comic_manager_7">Comic Manager 7</a>
+<ul class="sectlevel2">
+<li><a href="#_collection_view_options">Collection View Options</a></li>
+<li><a href="#user-defined-attributes">User Defined Attributes</a></li>
+<li><a href="#_more_features">More Features</a></li>
+<li><a href="#_features_overview">Features Overview</a></li>
+</ul>
+</li>
+<li><a href="#_automatic_video_converter_arc">Automatic Video Converter ARC</a>
+<ul class="sectlevel2">
+<li><a href="#_watch_mode">Watch Mode</a></li>
+<li><a href="#_directory_settings_files">Directory Settings files</a></li>
+<li><a href="#_track_selection_language_tsl">Track Selection Language (TSL)</a></li>
+</ul>
+</li>
+<li><a href="#_scripting_in_maya_blender">Scripting in Maya &amp; Blender</a>
+<ul class="sectlevel2">
+<li><a href="#_blender">Blender</a></li>
+<li><a href="#_maya">Maya</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div id="content">
+<div id="preamble">
+<div class="sectionbody">
+<div style="page-break-after: always;"></div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_unreal_engine_portals">Unreal Engine: Portals</h2>
+<div class="sectionbody">
+<div class="imageblock text-center">
+<div class="content">
+<img src="./images/portals/high%20res/portals%20logo%20and%20text.jpg" alt="portals logo and text">
+</div>
+</div>
+<div class="paragraph">
+<p><a href="https://youtu.be/lz-kOg3U4gU"><em>Portals</em></a> is a 3D First-Person-Shooter puzzle game and a mini copy of Valve&#8217;s <a href="https://store.steampowered.com/app/400/Portal/"><em>Portal</em></a> game.
+It is set in a research facility consisting of multiple test chambers, the user has to pass through by solving puzzles.
+To solve these puzzles the user has a <em>Portal Gun</em> at their disposal, which lets them create two portals through which objects and the Player themselves can be sent.
+I re-created 3 Levels of Valve&#8217;s <em>Portal</em> in Unreal Engine during a practical course in my studies.
+I made all the 3D models myself.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><a class="image" href="https://youtu.be/lz-kOg3U4gU"><img src="./images/resized/Watch%20On%20Youtube.png" alt="Watch On Youtube" width="150"></a></span>
+<span class="image"><a class="image" href="https://github.com/julian-boehme/Portals.git"><img src="./images/resized/Download%20from%20GitHub.png" alt="Download from GitHub" width="150"></a></span></p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="./images/portals/resized/portals%20with%20laser.jpg" alt="portals with laser" width="700">
+</div>
+</div>
+<div class="sect2">
+<h3 id="portal-mechanics-id">Portal Mechanics</h3>
+<div class="quoteblock">
+<blockquote>
+<div class="paragraph">
+<p>Speedy thing goes in, speedy thing comes out.</p>
+</div>
+</blockquote>
+<div class="attribution">
+&#8212; GLaDOS<br>
+<cite>In Portal Test Chamber 10</cite>
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Portals can only be spawned on <a href="#portal-spawnable-surface-id">Portal-Spawnable Surfaces</a></p>
+</li>
+<li>
+<p>When the Player or a teleportable object enters the source portal, they have to come out of the destination portal.</p>
+</li>
+<li>
+<p>Portals work like windows: You can see through one portal and see what&#8217;s in front of the other portal.</p>
+</li>
+</ul>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>The relative location of the object exiting the destination portal matches the relative location at which the object entered the source portal.</p>
+</li>
+<li>
+<p>The momentum and relative direction of objects entering the source portal is retained when exiting the destination portal.</p>
+</li>
+<li>
+<p>Spawned portals always have to be positioned upright in relation to the Player&#8217;s position, so they can pass through them unhindered.</p>
+</li>
+<li>
+<p>When something enters a portal vertically (e.g. the Player jumping or falling), the vertical momentum is re-directed towards the direction the destination portal is facing, allowing the Player to use their momentum to perform large jumps.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock center text-center">
+<div class="content">
+<img src="./images/portals/resized/momentum%202.jpg" alt="momentum image 2" width="700">
+</div>
+<div class="title">Figure 1. Momentum redirection - Source: <a href="https://i1.theportalwiki.net/img/9/9d/Portal_Fling.png">The Portal Wiki</a></div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="./images/portals/resized/look%202.jpg" alt="look 2" width="700">
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="./images/portals/resized/look%205.jpg" alt="look 5" width="700">
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="./images/portals/resized/laser%20targets%20activated.jpg" alt="laser targets activated" width="700">
+</div>
+</div>
+<div style="page-break-after: always;"></div>
+</div>
+<div class="sect2">
+<h3 id="game-elements-id">Game Elements</h3>
+<div class="imageblock text-center">
+<div class="content">
+<img src="./images/portals/high%20res/weighted%20cube%20activated.jpg" alt="weighted cube activated">
+</div>
+<div class="title">Figure 2. Activated Weighted Cube and Super Button</div>
+</div>
+<div class="paragraph">
+<p>The game deploys multiple game elements, the user can interact with in order to solve a puzzle:<br></p>
+</div>
+<div id="portals-id" class="dlist">
+<dl>
+<dt class="hdlist1">Portals</dt>
+<dd>
+<p>A <em>Portal</em> is a construct created by the <a href="#portal-gun-id">Portal Gun</a>.
+<em>Portals</em> are used to teleport the Player and specific teleportable objects from one location to another.
+They can only be created on <a href="#portal-spawnable-surface-id">Portal-Spawnable Surfaces</a>.
+See <a href="#portal-mechanics-id">Portal Mechanics</a> for more info.</p>
+</dd>
+</dl>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="./images/portals/game%20elements/resized/portals.jpg" alt="portals" width="400">
+</div>
+</div>
+<div id="portal-gun-id" class="dlist">
+<dl>
+<dt class="hdlist1">Portal Gun</dt>
+<dd>
+<p>The Portal Gun allows the Player to create <a href="#portals-id">Portals</a> on specific <a href="#portal-spawnable-surface-id">Portal-Spawnable-Surfaces</a>. The Player can only create portals on these surfaces.</p>
+</dd>
+</dl>
+</div>
+<div id="portal-spawnable-surface-id" class="dlist">
+<dl>
+<dt class="hdlist1">Portal-Spawnable Surface</dt>
+<dd>
+<p>A <em>Portal-Spawnable Surface</em> is a surface that allows the Player to spawn <a href="#portals-id">Portals</a> on.</p>
+</dd>
+</dl>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="./images/portals/game%20elements/resized/portal-spawnable%20surface.jpg" alt="portal spawnable surface" width="400">
+</div>
+</div>
+<div id="weighted-cube-id" class="dlist">
+<dl>
+<dt class="hdlist1">Weighted Cube</dt>
+<dd>
+<p>The <em>Weighted Cube</em> is used to activate <a href="#super-button-id">Super Buttons</a> and <a href="#cube-button-id">Cube Buttons</a>. It is spawned by a <a href="#cube-dropper-id">Cube Dropper</a>.
+A <em>Weighted Cube</em> that is set on a <a href="#super-button-id">Super Button</a>, and thus activating it, changes color from blue to yellow.</p>
+</dd>
+</dl>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="./images/portals/game%20elements/resized//weighted%20cube.jpg" alt="weighted cube" width="400">
+</div>
+</div>
+<div id="cube-dropper-id" class="dlist">
+<dl>
+<dt class="hdlist1">Cube Dropper</dt>
+<dd>
+<p>A <em>Cube Dropper</em> can spawn either <a href="#weighted-cube-id">Weighted Cubes</a> or <a href="#reflective-cube-id">Reflective Cubes</a>. It is activated by a <a href="#pedestal-button-id">Pedestal Button</a> or when the spawned Cube has been destroyed by, for example, <a href="#toxic-water-id">Toxic Water</a>.</p>
+</dd>
+</dl>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="./images/portals/game%20elements/resized//cube%20dropper.jpg" alt="cube dropper" width="400">
+</div>
+</div>
+<div id="super-button-id" class="dlist">
+<dl>
+<dt class="hdlist1">Super Button</dt>
+<dd>
+<p>A <em>Super Button</em> can be triggered/pressed by putting an object onto it. It can be pressed by the Player standing on it or by other objects such as a <a href="#weighted-cube-id">Weighted Cube</a>.
+An activated <em>Super Button</em> changes color from light to blue.</p>
+</dd>
+</dl>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="./images/portals/game%20elements/resized/super%20button.jpg" alt="super button" width="400">
+</div>
+</div>
+<div id="cube-button-id" class="dlist">
+<dl>
+<dt class="hdlist1">Cube Button</dt>
+<dd>
+<p>A <em>Cube Button</em> is similar to the <a href="#super-button-id">Super Button</a>, but is only triggered by <a href="#weighted-cube-id">Weighted Cubes</a>.
+<em>Model not finished yet.</em></p>
+</dd>
+</dl>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="./images/portals/game%20elements/resized/cube%20button.jpg" alt="cube button" width="400">
+</div>
+</div>
+<div id="energy-ball-id" class="dlist">
+<dl>
+<dt class="hdlist1">Energy Ball</dt>
+<dd>
+<p>An <em>Energy Ball</em> is emitted from a source and has to be directed into a target using <a href="#portals-id">Portals</a>.</p>
+</dd>
+</dl>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="./images/portals/game%20elements/resized/energy%20ball.jpg" alt="energy ball" width="400">
+</div>
+</div>
+<div id="pedestal-button-id" class="dlist">
+<dl>
+<dt class="hdlist1">Pedestal Button</dt>
+<dd>
+<p>A <em>Pedestal Button</em> is a button that can be pressed by the Player and results in an action that is triggered.
+An action could be the activation of a <a href="#cube-dropper-id">Cube Dropper</a>, a <a href="#lift-id">Lift</a>, or a <a href="#moving-platform-id">Moving Platform</a>.<br>
+The <em>Pedestal Button</em> has an <em>Activation Duration</em>, which specifies how long the action is performed.
+It can be performed for a limited amount of time or indefinitely.
+You could, for example, reverse an <a href="#excursion-funnel-id">Excursion Funnel</a> for 2 seconds.</p>
+</dd>
+</dl>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="./images/portals/game%20elements/resized/pedestal%20button.jpg" alt="pedestal button" width="400">
+</div>
+</div>
+<div id="disintegrator" class="dlist">
+<dl>
+<dt class="hdlist1">Disintegrator</dt>
+<dd>
+<p>A <em>Disintegrator</em> is a field that destroys objects such as the <a href="#weighted-cube-id">Weighted Cube</a> and the <a href="#reflective-cube-id">Reflective Cube</a>.
+The Player can pass the <em>Disintegrator</em> unhindered, but their portals will disappear. <em>Disintegrators</em> can be disabled by, for example, pressing a <a href="#pedestal-button-id">Pedestal Button</a>, <a href="#super-button-id">Super Button</a>, or by activating a <a href="#laser-target-id">Laser Target</a>.</p>
+</dd>
+</dl>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="./images/portals/game%20elements/resized/disintegrator.jpg" alt="disintegrator" width="400">
+</div>
+</div>
+<div id="lift-id" class="dlist">
+<dl>
+<dt class="hdlist1">Lift</dt>
+<dd>
+<p><em>Lifts</em> move the player vertically, activated by a <a href="#pedestal-button-id">Pedestal Button</a> nearby or automatically when the Player steps on them.</p>
+</dd>
+</dl>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="./images/portals/game%20elements/resized/lift.jpg" alt="lift" width="400">
+</div>
+</div>
+<div id="moving-platform-id" class="dlist">
+<dl>
+<dt class="hdlist1">Moving Platform</dt>
+<dd>
+<p><em>Moving Platforms</em> move on a straight line. They can be activated by the player stepping on them, or by a <a href="#pedestal-button-id">Pedestal Button</a> or <a href="#super-button-id">Super Button</a>.
+<em>Moving Platforms</em> can either move only once when triggered or in a loop with a specified time interval.</p>
+</dd>
+</dl>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="./images/portals/game%20elements/resized/moving%20platform.jpg" alt="moving platform" width="400">
+</div>
+</div>
+<div id="light-bridge-id" class="dlist">
+<dl>
+<dt class="hdlist1">Light Bridge</dt>
+<dd>
+<p>A <em>Light Bridge</em> is emitted by a <em>Light Bridge Base</em> into a specified direction.
+It is made of a translucent hard surface the Player can walk on and objects can be placed on.
+It can be teleported through <a href="#portals-id">Portals</a>.</p>
+</dd>
+</dl>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="./images/portals/game%20elements/resized/light%20bridge.jpg" alt="light bridge" width="400">
+</div>
+</div>
+<div id="laser-barrier-id" class="dlist">
+<dl>
+<dt class="hdlist1">Laser Barrier</dt>
+<dd>
+<p><em>Laser Barriers</em> are used to stop the player from going where he is not yet supposed to go.
+Objects cannot pass the barrier either.
+It is a similar mechanism like the <a href="#security-door-id">Security Door</a>, but takes up less space and the player can see through them.</p>
+</dd>
+</dl>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="./images/portals/game%20elements/resized/laser%20barrier.jpg" alt="laser barrier" width="400">
+</div>
+</div>
+<div id="excursion-funnel-id" class="dlist">
+<dl>
+<dt class="hdlist1">Excursion Funnel</dt>
+<dd>
+<p>The <em>Excursion Funnel</em> removes gravity and pushes the Player and objects that enter it into a direction with a certain speed.
+The direction of the <em>Excursion Funnel</em> can be reversed by triggers such as <a href="#pedestal-button-id">Pedestal Buttons</a> or <a href="#super-button-id">Super Buttons</a>.</p>
+</dd>
+</dl>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./images/portals/game%20elements/resized/excursion%20funnel%201.jpg" alt="excursion funnel 1" width="400"></span>
+<span class="image"><img src="./images/portals/game%20elements/resized/excursion%20funnel%202.jpg" alt="excursion funnel 2" width="400"></span></p>
+</div>
+<div id="laser-source-id" class="dlist">
+<dl>
+<dt class="hdlist1">Laser Source</dt>
+<dd>
+<p>A <em>Laser Source</em> emits a <a href="#laser-id">Laser</a>.</p>
+</dd>
+</dl>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="./images/portals/game%20elements/resized/laser%20source.jpg" alt="laser source" width="400">
+</div>
+</div>
+<div id="laser-target-id" class="dlist">
+<dl>
+<dt class="hdlist1">Laser Target</dt>
+<dd>
+<p>The <em>Laser Target</em> awaits a <a href="#laser-id">Laser</a>. As soon as a <em>Laser</em> hits one or multiple <em>Laser Targets</em>, the puzzle is regarded as solved.
+A <em>Laser Target</em> can either be pass-through or solid. Pass-through targets let the <a href="#laser-id">Laser</a> that hits them pass through unhindered. Solid targets stop the laser.
+An activated <em>Laser Target</em> changes color from red to yellow.</p>
+</dd>
+</dl>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="./images/portals/game%20elements/resized/laser%20target.jpg" alt="laser target" width="400">
+</div>
+</div>
+<div id="laser-id" class="dlist">
+<dl>
+<dt class="hdlist1">Laser</dt>
+<dd>
+<p>A <em>Laser</em> is emitted by its source in a straight line and stops as soon as it hits an object. The Player tries to re-direct the laser into one or multiple <a href="#laser-target-id">Laser Targets</a> to solve a puzzle.</p>
+</dd>
+</dl>
+</div>
+<div id="reflective-cube-id" class="dlist">
+<dl>
+<dt class="hdlist1">Reflective Cube</dt>
+<dd>
+<p>A <em>Reflective Cube</em> can be used to redirect a <a href="#laser-id">Laser</a> into its <a href="#laser-target-id">Laser Target</a>.</p>
+</dd>
+</dl>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="./images/portals/game%20elements/resized/reflective%20cube.jpg" alt="reflective cube" width="400">
+</div>
+</div>
+<div id="catapult-id" class="dlist">
+<dl>
+<dt class="hdlist1">Catapult</dt>
+<dd>
+<p>A <em>Catapult</em> catapults the player and physics objects through the air. It can catapult in any direction and can be mounted either on the floor or walls.</p>
+</dd>
+</dl>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="./images/portals/game%20elements/resized/catapult.jpg" alt="catapult" width="400">
+</div>
+</div>
+<div id="security-door-id" class="dlist">
+<dl>
+<dt class="hdlist1">Security Door</dt>
+<dd>
+<p><em>Security Doors</em> can be used as normal doors or to keep the player from leaving a puzzle room without solving the puzzle. The door has to states: <em>Locked</em> and <em>unlocked</em> indicated by red and green lights above the door.<br>
+<em>Security Doors</em> can be unlocked either by a trigger (e.g. a <a href="#super-button-id">Super Button</a>) or when the puzzle has been solved.</p>
+</dd>
+</dl>
+</div>
+<div id="toxic-water-id" class="dlist">
+<dl>
+<dt class="hdlist1">Toxic Water</dt>
+<dd>
+<p><em>Toxic Water</em> kills the Player instantly.
+<em>Toxic Water</em> also disintegrates objects such as the <a href="#weighted-cube-id">Weighted Cube</a>.</p>
+</dd>
+</dl>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="./images/portals/game%20elements/resized/toxic%20water.jpg" alt="toxic water" width="400">
+</div>
+</div>
+<div class="paragraph">
+<p><br></p>
+</div>
+<div style="page-break-after: always;"></div>
+<div class="sect3">
+<h4 id="_teleportable_objects">Teleportable Objects</h4>
+<div class="ulist">
+<div class="title">The following objects can be teleported by <a href="#portals-id">Portals</a>:</div>
+<ul>
+<li>
+<p>The Player</p>
+</li>
+<li>
+<p><a href="#weighted-cube-id">Weighted Cubes</a></p>
+</li>
+<li>
+<p><a href="#reflective-cube-id">Reflective Cubes</a></p>
+</li>
+<li>
+<p><a href="#laser-id">Lasers</a></p>
+</li>
+<li>
+<p><a href="#energy-ball-id">Energy Balls</a></p>
+</li>
+<li>
+<p><a href="#light-bridge-id">Light Bridges</a></p>
+</li>
+<li>
+<p><a href="#excursion-funnel-id">Excursion Funnels</a></p>
+</li>
+<li>
+<p>Every Physics Object</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="./images/portals/resized/teleported%20bridge.jpg" alt="teleported bridge">
+</div>
+</div>
+<div style="page-break-after: always;"></div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_unity_just_another_zombie_shooter">Unity: Just Another Zombie Shooter</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><em>Just Another Zombie Shooter</em> (JAZS) is a straight-forward first-person zombie shooter.
+It is inspired by games like the original <em>Resident Evil</em> series (0-4), <em>Dead Island</em>, and <em>Left 4 Dead</em>.</p>
+</div>
+<div class="sect2">
+<h3 id="_goal_of_the_game">Goal Of The Game</h3>
+<div class="paragraph">
+<p>In the current iteration of the game, the goal is to kill all zombies in the level. It&#8217;s that simple.
+The player can pick up different weapons, each with their own characteristics, advantages, and disadvantages.
+The player is equipped with a flashlight, whose batteries need to be replaced by new ones, which can be picked up in the levels.
+Other pickups include different types of ammo and health.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_the_map">The Map</h3>
+<div class="imageblock">
+<div class="content">
+<img src="./images/unity/screenshots/map%20overview%201.png" alt="Map overview">
+</div>
+<div class="title">Figure 3. Map overview</div>
+</div>
+<div class="paragraph">
+<p>The map resembles an abandoned industrial area at an unkown location.<br>
+The initial idea was for it to be a night-map, but later on it&#8217;s been decided to implement a rudimentary day-night-cycle by animating the sun&#8217;s light intensity over time. <br>
+The <code>DayNightCycle.cs</code> class provides settings for <code>StartBrightness</code>, <code>EndBrightness</code> and <code>Speed</code> to control the day-night-cycle.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="./images/unity/screenshots/map%20top%20view.png" alt="Map Top View" width="300">
+</div>
+<div class="title">Figure 4. Map top view with enemy locations and chase ranges</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="id_HUD">The HUD</h3>
+<div id="id_hud-img" class="imageblock">
+<div class="content">
+<img src="./images/unity/screenshots/hud.png" alt="HUD">
+</div>
+<div class="title">Figure 5. HUD</div>
+</div>
+<div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+(1) Flashlight 
+</td>
+<td class="hdlist2">
+<p>A progress bar showing the current battery level of the flashlight.</p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+(2) Health 
+</td>
+<td class="hdlist2">
+<p>The current health of the player.</p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+(3) CCW Charging 
+</td>
+<td class="hdlist2">
+<p>A progress bar displaying the charging level of the equipped Close Combat Weapon.</p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+(4) Weapon Switching 
+</td>
+<td class="hdlist2">
+<p>A progress bar displaying the duration of weapon switching (currently not visible).</p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+(5) Ammo 
+</td>
+<td class="hdlist2">
+<p>The available ammo in the <em>Ammo Bag</em> for the caliber of the currently selected weapon. Does not include ammo loaded into a weapon.</p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+(6) Message Box 
+</td>
+<td class="hdlist2">
+<p>A message box pop-up. E.g. used for informing the player of picked up items.</p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+(7) Damage Indicator 
+</td>
+<td class="hdlist2">
+<p>Flashes when the player receives damage.</p>
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_weapon_system">Weapon System</h3>
+<div class="paragraph">
+<p>A lot of care went into the development of the weapon system.
+Initially it was only meant to include firearms, but later on Close Combat Weapons (CCWs) have been added as well to allow for a more diverse gameplay and to give the player more options in regards to how to complete the levels.
+Close Combat Weapons are weapons the player can only deploy in close range.
+They have <code>condition</code> and <code>decayRate</code> attributes (among others) defining how good of a shape they are in and when they will break and subsequently be unusable.
+A weapon needs to be picked up first to be added to the inventory, for example from a <a href="#id_crates">Supply Crate</a>.
+Whether or not a weapon is in the inventory is determined by its <code>available</code> boolean attribute.</p>
+</div>
+<div class="paragraph">
+<p>Switching weapons can take a long time depending on how unwieldy the gun ist. Every weapon has a <code>drawTime</code> (the time it takes to draw the weapon) and a <code>holsterTime</code> (the time it takes to put the weapon away). The sum of the <code>holsterTime</code> of the current weapon and the <code>drawTime</code> of the next weapon  make up the total time it takes to switch weapons (see <a href="#id_switch-weapon">SwitchWeapon code</a>).
+A progress bar (see <a href="#id_HUD">The HUD</a>) is displayed to visualize the progress, because adding these animations wasn&#8217;t possible in the current version of the game due to time constraints.</p>
+</div>
+<div id="id_switch-weapon" class="imageblock">
+<div class="content">
+<img src="./images/unity/code/SwitchWeapon.png" alt="SwitchWeapon">
+</div>
+<div class="title">Figure 6. SwitchWeapon code</div>
+</div>
+<div class="sect3">
+<h4 id="_guns">Guns</h4>
+<div class="paragraph">
+<p>The game provides a variety of firearms to fight off zombies. Each firearm has its own advantages and disadvantages.
+For example: Pistols are quicker to draw and holster than rifles.
+Rifles for which every round has to be inserted individually (single round reload), such as the <em>M40</em> and the <em>Shotgun</em> need a much longer time to reload fully, but make up for it with other strengths, such as higher damage or range.
+Guns and their ammunition can be picked up from <a href="#id_crates">Crates</a>.</p>
+</div>
+<div class="paragraph">
+<p>Switching weapons and reloading is meant to take a long time forcing the player to make wiser decisions in regards to avoiding the enemy, managing ammo, and making use of <a href="#id_CCWs">Close Combat Weapons</a>.</p>
+</div>
+<div id="id_shotgun-attributes" class="paragraph">
+<div class="title">Shotgun attributes</div>
+<p><span class="image"><img src="./images/unity/screenshots/inspector/shotgun%20attributes.png" alt="Shotgun attributes" width="300"></span></p>
+</div>
+<table id="id_guns-comparison" class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 1. Guns Comparison</caption>
+<colgroup>
+<col style="width: 16.6666%;">
+<col style="width: 16.6666%;">
+<col style="width: 16.6666%;">
+<col style="width: 16.6666%;">
+<col style="width: 16.6666%;">
+<col style="width: 16.667%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Weapon</th>
+<th class="tableblock halign-left valign-top">Mk23</th>
+<th class="tableblock halign-left valign-top">M4A1</th>
+<th class="tableblock halign-left valign-top">Shotgun</th>
+<th class="tableblock halign-left valign-top">M40A3</th>
+<th class="tableblock halign-left valign-top">Magnum</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Image</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="./images/unity/screenshots/models/weapons/Mk23.png" alt="Mk23" width="100"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="./images/unity/screenshots/models/weapons/M4A1.png" alt="M4A1" width="100"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="./images/unity/screenshots/models/weapons/shotgun.png" alt="shotgun" width="100"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="./images/unity/screenshots/models/weapons/M40A3.png" alt="M40A3" width="100"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="./images/unity/screenshots/models/weapons/magnum.png" alt="magnum" width="100"></span></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Range</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">200</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1000</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">400</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">5000</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">400</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Draw Time</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0.5</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0.5</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1.3</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1.4</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0.7</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Holster Time</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0.2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1.2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0.7</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Damage</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">10</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">20</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">50</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">40</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">100</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Ammo Type</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">.45 ACP</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">5.56mm</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">12 Gauge</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">7.62mm</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">.357 Magnum</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Magazine Capacity</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">12</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">30</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">6</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">5</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">6</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Reload Time</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1.6</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2.5</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">7.1</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Time Between Shots</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0.2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0.2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1.1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1.91</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0.9</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Has Zoom</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">No</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">No</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">No</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Yes</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">No</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Single Round Reload</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">No</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">No</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Yes</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Yes</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">No</p></td>
+</tr>
+</tbody>
+</table>
+<div class="sect4">
+<h5 id="id_caliber">Weapon Caliber</h5>
+<div class="paragraph">
+<p>Guns are categorized by their caliber.
+The game is not restricted to a one-to-one mapping of calibers.
+Ammunition of a certain caliber can be used for any weapon firing that caliber, though currently the game has only one weapon available for every caliber.<br>
+But in theory, you could have a .45 ACP Colt 1911 with a capacity of 7 rounds as well as a .45 ACP Glock 21 with a capacity of 13 rounds.
+When picking up any .45 ACP ammo, the player can choose which gun they want to use it with.
+Another example would be the 7.62mm round, usable for the AK-47 as well as the M40 bolt action rifle. The player can choose to use the ammo for medium to close ranges with the AK-47 or for long ranges taking advantage of the M40&#8217;s scope.</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_ammo_system">Ammo System</h5>
+<div class="paragraph">
+<p>All ammo that is being picked up, is stored in the <em>Ammo Bag</em>.
+It has slots for every caliber (see <a href="#id_ammo-bag-attributes">Ammo Bag attributes</a>).
+A reload takes the ammo necessary to fill up the current magazine out of the Ammo Bag and puts it into the magazine.
+That means, the Ammo Bag only contains ammo that is currently not assigned to a magazine. This way, collisions are avoided when multiple weapons of the same caliber would try to access the shared ammo pool.</p>
+</div>
+<div id="id_ammo-bag-attributes" class="paragraph">
+<div class="title">Ammo Bag attributes</div>
+<p><span class="image"><img src="./images/unity/screenshots/inspector/ammo%20bag%20attributes.png" alt="Ammo Bag attributes" width="300"></span></p>
+</div>
+<div class="paragraph">
+<p>The HUD only displays the ammo in the <em>Ammo Bag</em> (see <a href="#id_HUD">The HUD</a>). There is no display for the ammo left in the magazine. The player has to guess for themselves when the best time is to reload.</p>
+</div>
+<div class="paragraph">
+<p>Shotguns and bolt action rifles have a "single round reload", meaning they can only be reloaded one bullet at a time. Pressing the <code>Reload</code> key (default <code>R</code>) reloads one round.
+By holding the key down the player can keep reloading rounds until the gun is fully loaded (see <a href="#id_reload-single-round">ReloadSingleRound() code</a>).
+This feature introduced additional problems creating the reload animations, which had to be fixed.<br>
+Single round reloads are especially slow. Guns that have this restriction need to make up for it in another way.
+In the case of the <em>Shotgun</em> it is in damage and in the case of the <em>M40</em> it is in damage, high range, and the scope.</p>
+</div>
+<div id="id_reload-single-round" class="imageblock">
+<div class="content">
+<img src="./images/unity/code/ReloadSingleRound.png" alt="ReloadSingleRound() code" width="600">
+</div>
+<div class="title">Figure 7. ReloadSingleRound() code</div>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="id_CCWs">Close Combat Weapons</h4>
+<div class="paragraph">
+<p><em>Close Combat Weapons</em> (CCWs) are weapons that can only be used in close range to the enemy, exposing the player to enemy attacks.
+CCWs give the user more variety in how they solve the tasks in each level and how they attack enemies.
+Since ammo is rare and precious in this game, CCWs need to exist as a fallback option when the player runs out of ammo or if they want to conserve their ammo for more dire situations.</p>
+</div>
+<div class="sect4">
+<h5 id="_weapon_deterioration">Weapon Deterioration</h5>
+<div class="paragraph">
+<p>CCWs can come in different <code>conditions</code> (represented as a float between <code>0.0</code> and <code>1.0</code>), ranging from <em>destroyed</em> (condition 0.0) over <em>used</em> to <em>brand new</em> (condition 1.0).
+A CCW with a <code>condition</code> of <code>0.0</code> is regarded as broken and will be removed from the inventory of the player.
+The weapon is no longer usable and no longer available to the player.
+To use that weapon again, it has to be picked up again, for example from a <a href="#id_crates">Crate</a>.<br>
+The rate with which a weapon&#8217;s <code>condition</code> deteriorates is determined by the <code>chargingLevel</code> it is used with and the <code>decayRate</code> for that weapon.
+The <code>decayRate</code> determines how fast a weapon&#8217;s <code>condition</code> deteriorates with every hit.
+The <a href="#id_weapon-charging"><code>chargingLevel</code></a> with which the weapon is used also plays a role in the deterioration of the CCW.
+The harder the player hits, the faster the weapon deteriorates.</p>
+</div>
+<div class="paragraph">
+<p>See <a href="#id_ccw-attributes">Close Combat Weapons attributes</a> for a full list of CCW attributes.</p>
+</div>
+<div id="id_deteriorate-weapon-condition" class="imageblock">
+<div class="content">
+<img src="./images/unity/code/DeteriorateWeaponCondition.png" alt="DeteriorateWeaponCondition" width="400">
+</div>
+<div class="title">Figure 8. DeteriorateWeaponCondition() code</div>
+</div>
+</div>
+<div class="sect4">
+<h5 id="id_weapon-charging">Weapon Charging</h5>
+<div class="paragraph">
+<p><em>CCWs</em> can be charged by pressing and holding the left mouse button to increase damage.
+The attack is executed when the mouse button is released.
+The current charging level is displayed in the <code>Charging Progress Bar</code> (see <a href="#id_HUD">HUD</a>).</p>
+</div>
+<div class="paragraph">
+<p>A CCWs has a <code>minDamage</code> attribute and a <code>maxDamage</code> attribute. A hit without charging results in <code>minDamage</code>.
+A hit fully charged results in <code>maxDamage</code>. Any values in between are calculated accordingly based on the charging level (see <a href="#id_calculate-damage">CalculateDamage() code</a>).
+The <code>chargeRate</code> determines the time it takes to fully charge the weapon to deal maximum damage (see <a href="#id_ccw-attributes">Close Combat Weapons attributes</a>).</p>
+</div>
+<div id="id_calculate-damage" class="paragraph">
+<div class="title">CalculateDamage() code</div>
+<p><span class="image"><img src="./images/unity/code/CalculateDamage.png" alt="CalculateDamage" width="400"></span></p>
+</div>
+<div id="id_ccw-attributes" class="paragraph">
+<div class="title">Close Combat Weapons attributes</div>
+<p><span class="image"><img src="./images/unity/screenshots/inspector/close%20combat%20weapon%20attributes.png" alt="Close Combat Weapons attributes" width="300"></span></p>
+</div>
+<table id="id_ccw-comparison" class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 2. Close Combat Weapons Comparison</caption>
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Weapon</th>
+<th class="tableblock halign-left valign-top">Baseball Bat</th>
+<th class="tableblock halign-left valign-top">Katana</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Image</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="./images/unity/screenshots/models/weapons/baseball%20bat.png" alt="baseball bat" width="200"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="./images/unity/screenshots/models/weapons/katana.png" alt="katana" width="200"></span></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Range</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1.67</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Draw Time</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0.5</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0.5</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Holster Time</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0.2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Time Between Attacks</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0.5</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Charge Rate</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0.6</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1.5</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Min Damage</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">10</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">34</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Max Damage</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">20</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">80</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Condition</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">varying</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">varying</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Decay Rate</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0.3</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0.1</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_pickup_system">Pickup System</h3>
+<div id="id_pickupItemFromSupplyCrate" class="imageblock">
+<div class="content">
+<img src="./images/unity/code/PickupItemFromSupplyCrate.png" alt="PickupItemFromSupplyCrate">
+</div>
+<div class="title">Figure 9. Code for picking up the next item from the supply crate.</div>
+</div>
+<div class="sect3">
+<h4 id="id_crates">Crates</h4>
+<div class="paragraph">
+<p><em>Crates</em> can contain all items that can be picked up by the player.</p>
+</div>
+<div class="paragraph">
+<p>Those currently include:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Weapons (Guns and Close Combat Weapons)</p>
+</li>
+<li>
+<p>Ammo of all calibers</p>
+</li>
+<li>
+<p>Health</p>
+</li>
+<li>
+<p>Batteries</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>An example of how a <em>Crate</em> is displayed in the inspector can be seen in <a href="#id_supply-crate-attributes">Attributes of a Supply Crate</a>.</p>
+</div>
+<div id="id_supply-crate-attributes" class="paragraph">
+<div class="title">Attributes of a Supply Crate</div>
+<p><span class="image"><img src="./images/unity/screenshots/inspector/supply%20crate%20attributes.png" alt="Attributes of a Supply Crate" width="300"></span></p>
+</div>
+<div class="paragraph">
+<p>There are currently 3 (or rather 4) types of <em>Crates</em>:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 30%;">
+<col style="width: 20%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Image</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Name</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Description</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="./images/unity/screenshots/models/crates/supply%20crate.png" alt="supply crate" width="100"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Supply Crate</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Contains all kinds of pickups</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="./images/unity/screenshots/models/crates/ammo%20crate.png" alt="ammo crate" width="100"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Ammo Crate</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Contains weapons and ammunition</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="./images/unity/screenshots/models/crates/first%20aid%20crate.png" alt="first aid crate" width="100"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">First Aid Crate</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Contains health</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="./images/unity/screenshots/models/crates/first%20aid%20kit.png" alt="first aid kit" width="100"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">First Aid Kit</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Contains health (technically not a Crate)</p></td>
+</tr>
+</tbody>
+</table>
+<div style="page-break-after: always;"></div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_blender_tie_fighter_advertisement">Blender: TIE-Fighter Advertisement</h2>
+<div class="sectionbody">
+<div class="imageblock text-center">
+<div class="content">
+<img src="./images/tie/thumbnail%20B.jpg" alt="thumbnail B">
+</div>
+</div>
+<div class="paragraph">
+<p>During a practical course at university, I created an "advertisement" for the <a href="https://en.wikipedia.org/wiki/TIE_fighter">TIE-Fighter</a> in <a href="https://www.blender.org/">Blender</a>.</p>
+</div>
+<div class="paragraph">
+<p>My job consisted of:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Idea &amp; Concept</p>
+</li>
+<li>
+<p>Layout</p>
+</li>
+<li>
+<p>Animatic</p>
+</li>
+<li>
+<p>PreViz</p>
+</li>
+<li>
+<p>TIE-Fighter modelling &amp; texturing</p>
+</li>
+<li>
+<p>Hangar modelling &amp; texturing</p>
+</li>
+<li>
+<p>Lighting</p>
+</li>
+<li>
+<p>Animation</p>
+</li>
+<li>
+<p>Motion Graphics</p>
+</li>
+<li>
+<p>Video Editing</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<a class="image" href="https://youtu.be/kKk7ACl6tfo"><img src="./images/resized/Watch%20On%20Youtube.png" alt="Watch On Youtube" width="150"></a>
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="./images/tie/thumbnail%20A.jpg" alt="thumbnail A">
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="./images/tie/Close%20Right%20Low.jpg" alt="Close Right Low">
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="./images/tie/Back%20Close%20Center%20Left.jpg" alt="Back Close Center Left">
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="./images/tie/Cam%20Wing%20Details.jpg" alt="Cam Wing Details">
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="./images/tie/Close%20Center%20Top.jpg" alt="Close Center Top">
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="./images/tie/Close%20Low%20Center.jpg" alt="Close Low Center">
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="./images/tie/Hangar%20Far%20Right%20(with%20TIE).jpg" alt="Hangar Far Right (with TIE)">
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="./images/tie/Scene%204%20Cam%20C.jpg" alt="Scene 4 Cam C">
+</div>
+</div>
+<div style="page-break-after: always;"></div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_comic_manager_7">Comic Manager 7</h2>
+<div class="sectionbody">
+<div class="imageblock text-center">
+<div class="content">
+<img src="./images/coma/splash%20screen.jpg" alt="splash screen">
+</div>
+</div>
+<div class="paragraph">
+<p>The Comic Manager, currently in Version 7, is a program I wrote in my free time to manage my comic book collection.
+It has been in development for over 10 years now.
+It connects to the <a href="https://comicvine.gamespot.com/">Comic Vine</a> API and downloads all relevant data of your comics such as: Cover, Writer, Artist, Release Date, Characters etc..
+You can also set up a shopping list and automatic pull list.
+A Comic Manager App will hopefully come one day, once time allows.<br>
+Tech stack: Java, JavaFX, Swing, SQL, JSON, REST-APIs, XML<br></p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="./images/coma/resized/main%20view.jpg" alt="main view" width="800">
+</div>
+<div class="title">Figure 10. Compact table without thumbnails</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<a class="image" href="https://gitfront.io/r/julianboehme/ne142Z1BDyDc/JComicManager/"><img src="./images/resized/download%20from%20GitHub.png" alt="download from GitHub" width="150"></a>
+</div>
+</div>
+<div class="paragraph">
+<p>A partial list of features:<br></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Collection</p>
+</li>
+<li>
+<p>Shopping List</p>
+</li>
+<li>
+<p><a href="#comic-vine-download-img">Download data from Comic Vine</a></p>
+</li>
+<li>
+<p>Pull List</p>
+</li>
+<li>
+<p>Manage Art Prints</p>
+</li>
+<li>
+<p><a href="#user-defined-attributes">User Defined Attributes</a></p>
+</li>
+<li>
+<p>Custom Lists</p>
+</li>
+<li>
+<p>Tags</p>
+</li>
+<li>
+<p>Variants</p>
+</li>
+<li>
+<p>Local File Links</p>
+</li>
+<li>
+<p>Online Links</p>
+</li>
+<li>
+<p>Favourites</p>
+</li>
+<li>
+<p>Comic Box Management</p>
+</li>
+<li>
+<p><a href="#lend-list-img">Lend List</a></p>
+</li>
+<li>
+<p>Sales List</p>
+</li>
+<li>
+<p>Reading Orders</p>
+</li>
+<li>
+<p>Mark Comics with:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Background color</p>
+</li>
+<li>
+<p>Border color</p>
+</li>
+<li>
+<p>Marker</p>
+</li>
+<li>
+<p>Flag</p>
+</li>
+<li>
+<p>Dot</p>
+</li>
+<li>
+<p>Tags</p>
+</li>
+<li>
+<p>Bookmarks</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Signed Comics</p>
+</li>
+<li>
+<p>Reading Suggestions</p>
+</li>
+<li>
+<p>Track references between comics</p>
+</li>
+<li>
+<p>Show comics from a specific Writer, Artist, Publisher etc.</p>
+</li>
+<li>
+<p>Manage trades/graphic novels and their contents</p>
+</li>
+<li>
+<p>General Reminders</p>
+</li>
+<li>
+<p><a href="#on-action-reminders-img">On-Action Reminders</a></p>
+</li>
+<li>
+<p>Digital Copy Code Expiration Reminders</p>
+</li>
+<li>
+<p><a href="#statistics-pie-chart-img">Statistics</a></p>
+</li>
+<li>
+<p><a href="#thumbnail-view-img">Thumbnail View</a></p>
+</li>
+<li>
+<p><a href="#card-view-img">Card View</a></p>
+</li>
+<li>
+<p><a href="#tiles-view-img">Tiles View</a></p>
+</li>
+</ul>
+</div>
+<div style="page-break-after: always;"></div>
+<div class="sect2">
+<h3 id="_collection_view_options">Collection View Options</h3>
+<div id="thumbnail-view-img" class="imageblock">
+<div class="content">
+<img src="./images/coma/resized/thumbnail%20view.jpg" alt="thumbnail view" width="1000">
+</div>
+<div class="title">Figure 11. Collection tab with thumbnail view</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="./images/coma/resized/full%20table%20width.jpg" alt="full table width" width="1000">
+</div>
+<div class="title">Figure 12. Full table width, no thumbnails</div>
+</div>
+<div id="card-view-img" class="imageblock">
+<div class="content">
+<img src="./images/coma/resized/cards%20view.jpg" alt="cards view" width="1000">
+</div>
+<div class="title">Figure 13. Cards View</div>
+</div>
+<div id="tiles-view-img" class="imageblock">
+<div class="content">
+<img src="./images/coma/resized/tiles%20view.jpg" alt="tiles view" width="1000">
+</div>
+<div class="title">Figure 14. Tiles View</div>
+</div>
+<div style="page-break-after: always;"></div>
+</div>
+<div class="sect2">
+<h3 id="user-defined-attributes">User Defined Attributes</h3>
+<div class="imageblock">
+<div class="content">
+<img src="./images/coma/resized/user%20defined%20attributes.jpg" alt="user defined attributes">
+</div>
+<div class="title">Figure 15. User Defined Attributes</div>
+</div>
+<div class="paragraph">
+<p>The user can create as many <em>User Defined Attributes</em> (UDA) as they like in as many tabs as they like.<br></p>
+</div>
+<div class="paragraph">
+<p>UDAs support the following input types:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Combo Box</p>
+</li>
+<li>
+<p>Check Box Table</p>
+</li>
+<li>
+<p>Text Field</p>
+</li>
+<li>
+<p>Text Area</p>
+</li>
+<li>
+<p>List</p>
+</li>
+<li>
+<p>Date</p>
+</li>
+<li>
+<p>Integer</p>
+</li>
+<li>
+<p>Decimal</p>
+</li>
+</ul>
+</div>
+<div style="page-break-after: always;"></div>
+</div>
+<div class="sect2">
+<h3 id="_more_features">More Features</h3>
+<div id="comic-vine-download-img" class="imageblock">
+<div class="content">
+<img src="./images/coma/high%20res/comic%20vine%20download.jpg" alt="comic vine download" width="600">
+</div>
+<div class="title">Figure 16. Downloading data from the Comic Vine API</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="./images/coma/high%20res/edit%20window.jpg" alt="Edit Window">
+</div>
+<div class="title">Figure 17. Edit Window</div>
+</div>
+<div id="lend-list-img" class="imageblock left">
+<div class="content">
+<img src="./images/coma/resized/lend%20list.jpg" alt="Lend List" width="500">
+</div>
+<div class="title">Figure 18. Lend List</div>
+</div>
+<div id="on-action-reminders-img" class="imageblock left">
+<div class="content">
+<img src="./images/coma/resized/on-action%20reminder.jpg" alt="On-Action Reminder" width="300">
+</div>
+<div class="title">Figure 19. On-Action Reminders</div>
+</div>
+<div id="statistics-pie-chart-img" class="imageblock left">
+<div class="content">
+<img src="./images/coma/resized/statistics%20pie%20chart.jpg" alt="Statistics Pie Chart" width="400">
+</div>
+<div class="title">Figure 20. Statistics Pie Chart</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="./images/coma/resized/sql%20db%20sample.jpg" alt="sql db sample" width="500">
+</div>
+<div class="title">Figure 21. Part of the SQL Database design</div>
+</div>
+<div style="page-break-after: always;"></div>
+</div>
+<div class="sect2">
+<h3 id="_features_overview">Features Overview</h3>
+<div class="paragraph">
+<p>An overview of the menus and features of <em>Comic Manager 7</em>.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./images/coma/menus/originals/edit%20menu.jpg" alt="Edit Menu" width="150"></span>
+<span class="image"><img src="./images/coma/menus/originals/marking%20menu.jpg" alt="Marking Menu" width="150"></span>
+<span class="image"><img src="./images/coma/menus/originals/show%20menu.jpg" alt="Show Menu" width="150"></span>
+<span class="image"><img src="./images/coma/menus/originals/trade%20menu.jpg" alt="Trade Menu" width="150"></span>
+<span class="image"><img src="./images/coma/menus/originals/window%20menu.jpg" alt="Window Menu" width="150"></span>
+<span class="image"><img src="./images/coma/menus/originals/image%20menu.jpg" alt="Image Menu" width="150"></span>
+<span class="image"><img src="./images/coma/menus/originals/misc%20menu.jpg" alt="Misc Menu" width="150"></span>
+<span class="image"><img src="./images/coma/menus/originals/select%20menu.jpg" alt="Select Menu" width="150"></span>
+<span class="image"><img src="./images/coma/menus/originals/view%20menu.jpg" alt="View Menu" width="150"></span>
+<span class="image"><img src="./images/coma/menus/originals/panel%20menu.jpg" alt="Panel Menu" width="150"></span></p>
+</div>
+<div style="page-break-after: always;"></div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_automatic_video_converter_arc">Automatic Video Converter ARC</h2>
+<div class="sectionbody">
+<div class="imageblock">
+<div class="content">
+<img src="./images/resized/ARC%20logo.png" alt="ARC logo">
+</div>
+</div>
+<div class="paragraph">
+<p>The <em>Automatic RIP Converter</em> (<em>ARC</em>) converts video files with as little user interaction as possible.
+It automatically detects the resolution of the video and, based on that, chooses the correct conversion quality.
+Interlaced video can be automatically detected and de-interlaced.
+Audio tracks will be automatically named after language and channel layout.
+E.g. "English 5.1", "German stereo".
+Subtitle tracks will be named after their language.
+Tech stack: Python, ffmpeg, ffprobe, MKVPropEdit, JSON</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<a class="image" href="https://gitfront.io/r/julianboehme/1eGtNVQv2iPp/AutomaticRipConverter/"><img src="./images/resized/Download%20from%20GitHub.png" alt="Download from GitHub" width="150"></a>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_watch_mode">Watch Mode</h3>
+<div class="paragraph">
+<p>You can use the <em>Watch</em> Mode and specify a folder to watch.
+All files in that folder are being converted.
+If the contents of the folder change, the new files and folders are converted as well.
+This mode supports directory settings files.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_directory_settings_files">Directory Settings files</h3>
+<div class="paragraph">
+<p>Note that <em>directory settings files</em> are only supported in <em>Watch</em> mode (<code>--watch</code>).
+Directory settings files ("dirsets") have the extension <code>.ds.json</code> and are stored in the dirsets folder.
+They specify the conversion settings that should be used for a certain folder.
+Dirset files are stored centrally in the <code>dirsets</code> directory.</p>
+</div>
+<div class="paragraph">
+<p>A <em>dirset reference file</em> (<code>.dsr</code> extension) points the program to the dirset to use for the directory the reference file resides in.
+The dirset reference has to have the same name as the dirset file it is referencing.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>conversion folder:                        ARC dirset folder:
+                                            Series japanese.ds.json
+    Jackie Chan chinese.dsr   ----------&gt;   Jackie Chan chinese.ds.json
+                                            Movies HD audio.ds.json</pre>
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="./images/ARC%20DSR%20example.jpg" alt="ARC DSR example">
+</div>
+<div class="title">Figure 22. Dirset reference file example</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="./images/ARC%20dirsets.jpg" alt="ARC dirsets">
+</div>
+<div class="title">Figure 23. Dirset directory containing all directory settings files</div>
+</div>
+<div class="paragraph">
+<p>You can specify a different settings file for every directory.
+These files update and change the program&#8217;s <em>startup settings</em> only for that specific directory
+and its subdirectories.
+Dirset settings override the <code>settings.json</code> file.
+They go top-down, never bottom-up. Directories above a dirset file are unaffected by it.
+Not all properties need to be present in a dirset file.
+Any properties that are missing are defined by the settings active in the parent folder.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_track_selection_language_tsl">Track Selection Language (TSL)</h3>
+<div class="paragraph">
+<p>The ARC <em>track selection language</em> (TSL) determines how audio tracks will be selected automatically.
+It uses the <a href="https://de.wikipedia.org/wiki/Liste_der_ISO-639-2-Codes">ISO-639-2</a> and <a href="https://de.wikipedia.org/wiki/Liste_der_ISO-639-1-Codes">ISO-639-1</a> naming abbreviation (e.g. "eng", "ita").</p>
+</div>
+<div class="paragraph">
+<p>Here&#8217;s a simple TSL example:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>    "audio_track_selection_rule" : [
+        "+lang(und, ger, eng) &amp; codec(hd, sd) &amp; layout(highest)",
+        "+lang(und, ger, eng) &amp; codec(sd) &amp; layout(stereo)"
+    ]</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Every line in the track selection language is a selection step the program takes:<br>
+<code>+lang(und, ger, eng) &amp; codec(hd, sd) &amp; layout(highest)</code></p>
+</div>
+<div class="paragraph">
+<p>Means:<br>
+Select (<code>+</code>) all tracks fulfilling all (<code>&amp;</code>) of the following conditions:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Language one of the following: und, ger, eng</p>
+</li>
+<li>
+<p>Codec one of the following: hd, sd</p>
+</li>
+<li>
+<p>Channel layout: Highest layout available (layout with the most channels)</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>After fulfilling that statement, the program executes the next statement:<br>
+<code>+lang(und, ger, eng) &amp; codec(sd) &amp; layout(stereo)</code><br>
+And adds the selected tracks to the already selected tracks.<br></p>
+</div>
+<div class="paragraph">
+<p>You can also tell the program to deselect tracks using a <code>-</code> instead of a <code>+</code>:<br>
+<code>-lang(eng) &amp; codec(sd) &amp; layout(stereo)</code></p>
+</div>
+<div class="paragraph">
+<p>A more complex example:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>"audio_track_selection_rule" : [
+    "+lang(und) &amp; codec(hd) &amp; layout(highest)",
+    "+lang(eng) &amp; codec(hd) &amp; layout(highest) | lang(prev) &amp; codec(sd) &amp; layout(highest)",
+    "+lang(und, ger, eng) &amp; codec(sd) &amp; layout(stereo)"
+    ]</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This snippet tells the program to:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Select the "undefined" HD track with the most channels</p>
+</li>
+<li>
+<p>Select tracks in english HD with the highest channels<br>
+If that is not available, select the highest SD track of the same language</p>
+</li>
+<li>
+<p>Add all SD stereo tracks with either: und, ger, eng</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Here&#8217;s a quick documentation of the TSL:<br></p>
+</div>
+<div class="paragraph">
+<p><strong>Track selection commands:</strong><br>
+<code>['lang', 'codec', 'layout']</code></p>
+</div>
+<div class="paragraph">
+<p><strong>Operators:</strong><br>
+<code>['+', '-', '&amp;', '|', ',', '!']</code></p>
+</div>
+<div class="paragraph">
+<p><code>+</code>: ADD track<br>
+<code>-</code>: REMOVE track<br>
+<code>&amp;</code>: Combines conditions with AND (all of them need to be true)<br>
+<code>,</code>: Combines conditions with OR (only one of them needs to be true)<br>
+<code>|</code>: The next statement is an ALTERNATIVE to the previous statement and is executed if the previous statement hasn&#8217;t been evaluated to true.<br>
+<code>!</code>: NEGATION of a statement<br></p>
+</div>
+<div class="paragraph">
+<p><strong>Values:</strong><br>
+Special Values:<br>
+<code>prev</code>: Selects the value from the previous statement that has not been evaluated to true.<br>
+<code>any</code>: Accepts any value</p>
+</div>
+<div class="paragraph">
+<p><strong>Languages:</strong><br>
+<code>['any', 'prev', 'chi', 'eng', 'fre', 'ger', 'ita', 'jap', 'kor', 'spa', 'und']</code></p>
+</div>
+<div class="paragraph">
+<p><strong>Codecs:</strong><br>
+<code>['any', 'prev', 'hd', 'sd', 'ac3', 'eac3', 'truehd', 'dts', 'dtshd', 'pcm', 'mp2']</code></p>
+</div>
+<div class="paragraph">
+<p><strong>Channel Layouts:</strong><br>
+<code>['any', 'prev', 'surround', 'non-surround', 'highest', 'lowest', '7.1', '6.1', '5.1', '4.0', 'stereo', 'mono']</code></p>
+</div>
+<div class="listingblock">
+<div class="title">Example directory structure to use with dirset and reference files:</div>
+<div class="content">
+<pre>conversion folder
+    -&gt; Chinese
+        * Movies chinese audio.dsr
+        -&gt; Jackie Chan
+            * Movies chinese and english audio.dsr
+    -&gt; Series SD audio
+        * Series SD audio.dsr
+    -&gt; Movies english HD audio
+        * Movies english HD audio.dsr</pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">Track selection results</div>
+<div class="content">
+<pre>Meister aller Klassen_t02 snippet.mkv   00:02:00   Extra      1920x1080   progressive
+
+Audio
+
+Sel    Ind    Lang    Codec       Layout    Old Title       New Title
+-----------------------------------------------------------------------------------------
+[ ]    0      deu     dtshd ma    5.1       Surround 5.1    German 5.1 [DTSHD MA]
+[x]    1      deu     dts         5.1       Surround 5.1    German 5.1 [DTS]
+[ ]    2      zho     dtshd ma    5.1       Surround 5.1    Chinese 5.1 [DTSHD MA]
+[x]    3      zho     dts         5.1       Surround 5.1    Chinese 5.1 [DTS]
+[ ]    4      zho     dtshd ma    Stereo    Stereo          Chinese Stereo [DTSHD MA]
+[x]    5      zho     dts         Stereo    Stereo          Chinese Stereo [DTS]
+[x]    6      eng     dts         Stereo    Stereo          English Stereo [DTS]
+
+Subtitles:
+
+Sel    Index    Language    Old Title       New Title
+---------------------------------------------------------
+[x]    0        deu         Undetermined    German
+[x]    1        deu         Undetermined    German</pre>
+</div>
+</div>
+<div style="page-break-after: always;"></div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_scripting_in_maya_blender">Scripting in Maya &amp; Blender</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Here are a few small scripts I wrote for <em>Maya</em> and <em>Blender</em>:</p>
+</div>
+<div class="sect2">
+<h3 id="_blender">Blender</h3>
+<div class="paragraph">
+<p>I wrote a Python script that allows the user to batch render a scene multiple times with different settings
+(e.g. Active camera, render range, render settings etc.).
+The plan is to turn it into a full batch network rendering script.
+Currently, it only works on the local machine with one scene file.
+Keep in mind that this is the very first version of the script. So, it&#8217;s still in beta.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<a class="image" href="https://github.com/julian-boehme/batchRenderer.git"><img src="./images/resized/Download%20from%20GitHub.png" alt="Download from GitHub" width="150"></a>
+</div>
+</div>
+<div class="paragraph">
+<p>The render settings are defined in a text file:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="./images/Blender%20batch%20renderer%20-%20batch%20file.jpg" alt="Blender batch renderer">
+</div>
+<div class="title">Figure 24. batch.txt</div>
+</div>
+<div class="paragraph">
+<p>Supported settings:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Camera</p>
+</li>
+<li>
+<p>Start Frame</p>
+</li>
+<li>
+<p>End Fame</p>
+</li>
+<li>
+<p>Rendering Engine</p>
+</li>
+<li>
+<p>Computing Device (CPU, GPU)</p>
+</li>
+<li>
+<p>OpenGLRender (Viewport animation)</p>
+</li>
+<li>
+<p>Width</p>
+</li>
+<li>
+<p>Height</p>
+</li>
+<li>
+<p>Percentage of resolution</p>
+</li>
+<li>
+<p>FPS</p>
+</li>
+<li>
+<p>Samples</p>
+</li>
+<li>
+<p>Add file extension</p>
+</li>
+<li>
+<p>Output file path</p>
+</li>
+<li>
+<p>Format</p>
+</li>
+<li>
+<p>Overwrite existing files</p>
+</li>
+<li>
+<p>Compression</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Soon-to-be-supported:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>IP address</p>
+</li>
+<li>
+<p>Blend files specific to every job</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_maya">Maya</h3>
+<div class="paragraph">
+<p>I wrote a Python script that allows the user to randomly animate any attribute of an object in certain intervals and strengths.
+The script creates keyframes, that can later on be tweaked.
+I used it to create the flickering light in my Half-Life 3 trailer.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<a class="image" href="https://github.com/julian-boehme/flickeringLight.git"><img src="./images/resized/Download%20from%20GitHub.png" alt="Download from GitHub" width="150"></a>
+</div>
+</div>
+<div style="page-break-after: always;"></div>
+</div>
+</div>
+</div>
+</div>
+<div id="footer">
+<div id="footer-text">
+Last updated 2024-02-19 13:29:02 +0100
+</div>
+</div>
+<script src=".\syntax_highlight/highlight.min.js"></script>
+<script>
+if (!hljs.initHighlighting.called) {
+  hljs.initHighlighting.called = true
+  ;[].slice.call(document.querySelectorAll('pre.highlight > code[data-lang]')).forEach(function (el) { hljs.highlightBlock(el) })
+}
+</script>
+</body>
+</html>
